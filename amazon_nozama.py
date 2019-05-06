@@ -13,5 +13,5 @@ def get_word(statement):
 
 
 if __name__ == '__main__':
-    statement = "the jaguar who  asked wanted raugaj him my deksa on the floor$"
+    statement = str(input)
     print(get_word(statement))
