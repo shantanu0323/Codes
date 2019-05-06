@@ -10,7 +10,6 @@ def distribute_chocolates(n, ratings):
         if rating > right_rating:
             if distribution[i] <= distribution[i + 1]:
                 distribution[i] = distribution[i + 1] + 1
-    # print(distribution)
     return sum(distribution)
 
 
