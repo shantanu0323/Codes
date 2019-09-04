@@ -3,15 +3,17 @@ def reverse(data):
 
 
 def get_word(statement):
+    if statement[-1] != '$':
+        return "$"
     words = statement[:-1].split(' ')
     for word in words:
-        checklist = words[words.index(word):]
+        checklist = words[words.index(word) + 1:]
         for item in checklist:
-            if reverse(item) == word:
+            if reverse(item).lower() == word.lower():
                 return word
     return "$"
 
 
 if __name__ == '__main__':
-    statement = str(input)
-    print(get_word(statement))
+    statement = str(input())
+    print(get_word(statement), end='')
